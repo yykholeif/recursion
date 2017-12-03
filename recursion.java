@@ -51,21 +51,21 @@ public int randomInt() {
 	return (int) number;
 }
 
-	int firstRole = randomInt();
-	int secondRole = randomInt();
-	int sum = firstRole + secondRole;
+int firstRole = randomInt();
+int secondRole = randomInt();
+int sum = firstRole + secondRole;
 
 //recursive function
 public int monopolyRecursiveRoll() {
 	int firstRole = randomInt();
 	int secondRole = randomInt();
 	int sum = firstRole + secondRole;
-
-	System.out.println("roll total: "+ sum)
-	if (firstRole == secondRole)
+	
+	if (firstRole != secondRole) {
 		return sum;
+	} else {	
+	return sum + monopolyRecursiveRoll();
 	}
-	monopolyRecursiveRoll()
 }
 
 
